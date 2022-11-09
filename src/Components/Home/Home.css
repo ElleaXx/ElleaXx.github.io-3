@@ -1,0 +1,110 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0;
+  border-bottom: solid 1px;
+}
+.navBar a {
+    text-decoration: none
+}
+
+.mainInfoTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0px;
+}
+
+.infoTitle {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.language {
+  display: flex;
+  position: relative;
+  right: -28px;
+  transform: rotate(-90deg);
+}
+.mainInfoImage {
+  height: 500px;
+  margin-bottom: 50px;
+  background-size: cover;
+  background-position-y: 40%;
+  background-image: url(https://s3-alpha-sig.figma.com/img/4a3f/6358/473d92de61764f572524ac59200c7086?Expires=1668988800&Signature=ccRen0HP~WWMHUK40xqQ9mBrQ8FOB0BAQa1WoQqCe7GdgLEsGp37-1QAnm7N2OqEH0rhuDfj64Edxsmqn1YpZnh5vH8ZcQ~O~hrYal79nmVCYfxLG2pBOG2svmld6zFLnKLZv5o0f4HhVEuNNGuckmui0oA0PH24n9lxJ632FLbOhUiFbNGOwyJPHlvBuYBXu9MAUiU2P7o4m5m0iidE-N7CB5cBTsoqK546QRySkVuC9AEd~~Tul9~1lslJAW~6BVlkT7mWVHL~cTwFY66RaXek4C5OdRokPu~gBh3OYkD0rFdmR25sMmd5~zwvd66k0Lckh9SaTk9BlT~ziqYd1g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+}
+.headline {
+  font-weight: bold;
+  font-size: x-large;
+}
+.block.aboutMeList,
+.block.portfolioList {
+  background-color: #f6f6f6;
+  padding: 50px 0px;
+  margin-left: -100%;
+  margin-right: -100%;
+}
+.skillsList {
+  padding: 50px 0px;
+}
+.block div:not(:last-child) {
+  padding-bottom: 25px;
+}
+.aboutMeText {
+  margin: 0 40%;
+}
+.aboutMeText :first-child {
+  padding-top: 0;
+  font-weight: bold;
+  font-size: x-large;
+}
+.adobeImage {
+  width: 90px;
+  height: 90px;
+}
+
+.star {
+  padding: 0px 5px;
+  width: 15px;
+  height: 15px;
+}
+
+.adobeName {
+  font-size: initial;
+  font-weight: initial;
+}
+
+.portfolio {
+  margin-bottom: 50px;
+}
+
+.adobeList {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: black;
+  color: #f6f6f6;
+  padding: 10px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-bottom: 80px;
+}
+
+button:active {
+  background-color: rgba(0, 0, 0, 0.89);
+}
+
+i {
+  font-size: 40px;
+  margin: 0 15px;
+}
+
+a {
+  color: black;
+}
