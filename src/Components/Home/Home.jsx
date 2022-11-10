@@ -5,20 +5,51 @@ function Home() {
   const [count, setCount] = useState(true);
   console.log(count);
   return (
-    <div id="home" className="container">
+    <div className="container">
+      <div id="home" style={{ position: "absolute", top: "0" }}></div>
       <div className="navBar">
-        <a href="#home">{count ? "Home" : "Главная"}</a>
-        <a href="#aboutMe">{count ? "About me" : "Обо мне"}</a>
-        <a href="#skills">{count ? "Skills" : "Навыки"}</a>
-        <a href="#portfolio">{count ? "Portfolio" : "Портфолио"}</a>
-        <a href="#contacts">{count ? "Contacts" : "Контакты"}</a>
+        <div className="blur"></div>
+        <input type="checkbox" id="checkboxToggle" />
+        <label for="checkboxToggle" className="hamburger">
+          <span className="hamburgerLine"></span>
+        </label>
+        <div className="menu">
+          <a className="aTostyle" href="#home">{count ? "Home" : "Главная"}</a>
+          <a href="#aboutMe">{count ? "About me" : "Обо мне"}</a>
+          <a href="#skills">{count ? "Skills" : "Навыки"}</a>
+          <a href="#portfolio">{count ? "Portfolio" : "Портфолио"}</a>
+          <a href="#contacts">{count ? "Contacts" : "Контакты"}</a>
+          <div className="languageMenu">
+            <div
+              onClick={() => setCount(false)}
+              style={
+                count
+                  ? { fontWeight: "initial", cursor: "pointer" }
+                  : { fontWeight: "bold", cursor: "default" }
+              }
+            >
+              RU{" "}
+            </div>
+            <div
+              onClick={() => setCount(true)}
+              style={
+                count
+                  ? { fontWeight: "bold", cursor: "default" }
+                  : { fontWeight: "initial", cursor: "pointer" }
+              }
+            >
+              {" "}
+              ENG
+            </div>
+          </div>
+        </div>
       </div>
       <div className="mainInfo">
         <div className="mainInfoTitle">
           <div className="infoTitle">
             {count ? "Denis" : "Денис"} <br /> {count ? "Novik" : "Новик"}
           </div>
-          <div>
+          <div className="infoTitleDesinger">
             {count ? "UI / UX desinger" : "UI / UX дизайнер"} <br />{" "}
             {count ? "24 years old, Minsk" : "24 года, Минск"}
           </div>
@@ -51,7 +82,8 @@ function Home() {
         </div>
         <div className="mainInfoImage"></div>
       </div>
-      <div id="aboutMe" className="block aboutMeList">
+      <div className="block aboutMeList">
+        <div id="aboutMe" className="anchor"></div>
         <div className="aboutMeText">
           <div className="headline">{count ? "About me" : "Обо мне"}</div>
           <div>
@@ -71,7 +103,8 @@ function Home() {
           </div>
         </div>
       </div>
-      <div id="skills" className="block skillsList">
+      <div className="block skillsList">
+        <div id="skills" className="anchor"></div>
         <div className="headline">{count ? "Skills" : "Навыки"}</div>
         <div style={{ paddingBottom: "50px" }}>
           {count
@@ -209,7 +242,9 @@ function Home() {
           </div>
         </div>
       </div>
-      <div id="portfolio" className="block portfolioList">
+      <div className="block portfolioList">
+        <div id="portfolio" className="anchor"></div>
+
         <div className="headline">{count ? "Portfolio" : "Портфолио"}</div>
         <div className="portfolio">
           <div>
@@ -239,7 +274,7 @@ function Home() {
               : "Целевая страница Braun - Концепция"}
           </a>
         </div>
-        <div className="portfolio">
+        {/* <div className="portfolio">
           <div>
             <img src="images/BSPP2266.png"></img>
           </div>
@@ -248,9 +283,11 @@ function Home() {
               ? "Online fashion store - Homepage"
               : "Интернет-магазин модной одежды - Домашняя страница"}
           </a>
-        </div>
+        </div> */}
       </div>
-      <div id="contacts" className="block footer">
+      <div className="block footer">
+      <div id="contacts" className="anchor"></div>
+
         <div className="headline" style={{ paddingTop: "50px" }}>
           {count ? "Contacts" : "Контакты"}
         </div>
@@ -264,7 +301,7 @@ function Home() {
             {count ? "Send message" : "Отправить сообщение"}
           </button>
         </a>
-        <div>
+        <div className="soc">
           <a href="https://www.linkedin.com/" target="_blank">
             <i class="fa-brands fa-linkedin"></i>
           </a>

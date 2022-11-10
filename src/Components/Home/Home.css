@@ -1,17 +1,46 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
 }
-.navBar {
-  display: flex;
-  justify-content: space-between;
-  padding: 25px 0;
-  border-bottom: solid 1px;
+@media all and (min-width: 900px) {
+  .navBar {
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    border-bottom: solid 1px;
+    position: fixed;
+    top: 0;
+    width: 70%;
+    backdrop-filter: blur(20px);
+  }
+  .adobeList {
+    display: flex;
+    justify-content: space-between;
+  }
+  button {
+    background-color: black;
+    color: #f6f6f6;
+    padding: 10px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-bottom: 80px;
+    border: none;
+  }
+  .blur {
+    display: none;
+  }
 }
 .navBar a {
-    text-decoration: none
+  text-decoration: none;
 }
-
+.mainInfo {
+  margin-top: 65px;
+}
 .mainInfoTitle {
   display: flex;
   align-items: center;
@@ -41,16 +70,23 @@ body {
   font-weight: bold;
   font-size: x-large;
 }
+.block {
+  position: relative;
+}
 .block.aboutMeList,
 .block.portfolioList {
   background-color: #f6f6f6;
   padding: 50px 0px;
-  margin-left: -100%;
-  margin-right: -100%;
+  margin-left: -21%;
+  margin-right: -21%;
 }
 .skillsList {
   padding: 50px 0px;
 }
+/* .block:not(:last-child){
+  margin-top: 90px !important;
+  padding: 90px !important;
+} */
 .block div:not(:last-child) {
   padding-bottom: 25px;
 }
@@ -82,20 +118,6 @@ body {
   margin-bottom: 50px;
 }
 
-.adobeList {
-  display: flex;
-  justify-content: space-between;
-}
-
-button {
-  background-color: black;
-  color: #f6f6f6;
-  padding: 10px 30px;
-  border-radius: 25px;
-  cursor: pointer;
-  margin-bottom: 80px;
-}
-
 button:active {
   background-color: rgba(0, 0, 0, 0.89);
 }
@@ -108,3 +130,180 @@ i {
 a {
   color: black;
 }
+img {
+  width: 70.5%;
+}
+.anchor {
+  position: absolute;
+  top: -70px;
+}
+
+.menu {
+  display: contents;
+}
+
+#checkboxToggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.hamburgerLine {
+  background-color: black;
+  display: block;
+  position: relative;
+  height: 2px;
+  width: 24px;
+}
+
+.hamburgerLine::before,
+.hamburgerLine::after {
+  background-color: black;
+  content: "";
+  display: block;
+  position: absolute;
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%;
+}
+
+.hamburgerLine::before {
+  top: 7px;
+}
+
+.hamburgerLine::after {
+  top: -7px;
+}
+.languageMenu {
+  display: none;
+  border-bottom: solid 1px;
+}
+.infoTitleDesinger {
+  display: contents;
+}
+@media (max-width: 900px) {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+  }
+  .languageMenu {
+    display: none;
+    border-bottom: solid 1px;
+  }
+  .adobeList {
+    display: block;
+  }
+  .mainInfo {
+    margin: 0;
+  }
+  .mainInfoTitle {
+    /* margin-top: 50px; */
+  }
+  .language {
+    display: none;
+  }
+  .languageMenu {
+    display: contents;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    
+    padding-bottom: 15px;
+
+  }
+  .languageMenu :first-child {
+    margin-right: 15px;
+  }
+  .infoTitleDesinger {
+    display: none;
+  }
+  button {
+    background-color: black;
+    color: #f6f6f6;
+    padding: 10px 30%;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-bottom: 80px;
+    border: none;
+  }
+  .aboutMeText {
+    margin: 0px 15% !important;
+  }
+  .navBar {
+    display: grid;
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    width: 100%;
+    left: 0px;
+  }
+  .menu a {
+    padding: 5px 0;
+    height: 100%;
+  }
+  .menu {
+    display: none;
+    max-width: 0;
+    overflow: hidden;
+    position: absolute;
+    background-color: #f6f6f6;
+    text-align: center;
+    right: 0;
+    left: 0;
+  }
+  .navBar::link    {
+    background-color: #f6f6f6;
+  }
+  #checkboxToggle:checked ~ .menu {
+    display: contents;
+    max-height: 100%;
+    transition: all 0.2s;
+  }
+  #checkboxToggle:checked ~ .hamburger, .menu div, a{
+    /* background-color: #f6f6f6; */
+    z-index: 1;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 15%;
+    padding: 5px 0px;
+    z-index: 10 !important;
+
+
+  }
+  #checkboxToggle:checked ~ .hamburger .hamburgerLine {
+    background-color: transparent;
+    transition: all 0.2s;
+  }
+
+  #checkboxToggle:checked ~ .hamburger .hamburgerLine::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  #checkboxToggle:checked ~ .hamburger .hamburgerLine::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  .soc a {
+    background-color: transparent;
+  }
+  .aTostyle {
+    padding-top: 50px !important;
+  }
+  .blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backdrop-filter: blur(20px);
+  }
+}
+
